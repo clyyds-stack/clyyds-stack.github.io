@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(base64 -w0 \"img/favicon.ico\")",
+      "Bash(python -c \"import base64; print\\(base64.b64encode\\(open\\('img/favicon.ico','rb'\\).read\\(\\)\\).decode\\(\\)\\)\")",
+      "Bash(python -c \"import base64; print\\(base64.b64encode\\(open\\('img/hello kitty.png','rb'\\).read\\(\\)\\).decode\\(\\)\\)\")",
+      "Bash(python -c \"import base64; print\\(base64.b64encode\\(open\\('img/stamp.png','rb'\\).read\\(\\)\\).decode\\(\\)\\)\")",
+      "Bash(python -c \"import base64; print\\(base64.b64encode\\(open\\('img/stamp-base.png','rb'\\).read\\(\\)\\).decode\\(\\)\\)\")",
+      "Bash(python -c \"import base64; print\\(base64.b64encode\\(open\\('img/wax.png','rb'\\).read\\(\\)\\).decode\\(\\)\\)\")",
+      "Bash(python -c \"import base64; print\\(base64.b64encode\\(open\\('img/texture.png','rb'\\).read\\(\\)\\).decode\\(\\)\\)\")",
+      "Bash(python -c \"import base64; print\\(base64.b64encode\\(open\\('img/bgm.png','rb'\\).read\\(\\)\\).decode\\(\\)\\)\")",
+      "Bash(python -c \"import base64; print\\(base64.b64encode\\(open\\('font/op.woff2','rb'\\).read\\(\\)\\).decode\\(\\)\\)\")",
+      "Bash(python build_single_html.py)",
+      "Bash(python fix_css_urls.py)",
+      "Bash(python -c \"from PIL import Image; print\\('Pillow available'\\)\")",
+      "Bash(pip install *)",
+      "Bash(python -m pip install Pillow -q)",
+      "Bash(python optimize.py)",
+      "Bash(python -c ' *)",
+      "Bash(rm optimize.py)",
+      "Bash(rm \"img/hello kitty_opt.png\")",
+      "Bash(python build_fixed.py)"
+    ]
+  }
+}
