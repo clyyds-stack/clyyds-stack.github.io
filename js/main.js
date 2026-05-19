@@ -19,17 +19,8 @@ function playPause() {
     }
 }
 
-function scaleEnvelope() {
-    let contact = $('#contact');
-    let containerWidth = 600;
-    let viewWidth = window.innerWidth;
-    let scale = Math.min(1, (viewWidth * 0.85) / containerWidth);
-    contact.css('transform', 'translateX(-50%) scale(' + scale + ')');
-}
-
 window.onload = function () {
     loadingPage();
-    scaleEnvelope();
     $.ajaxSettings.async = true;
     $.getJSON("./font/content.json", function (result) {
         content.salutation = result.salutation;
@@ -45,8 +36,10 @@ window.onload = function () {
         let currentUrl = window.location.href;
         let firstIndex = currentUrl.indexOf("#");
         if (firstIndex <= 0) window.location.href = currentUrl + "#contact";
-        scaleEnvelope();
     });
+    let contact = $('#contact');
+    let mtop = (window.innerHeight - contact.height()) * 0.5;
+    contact.css('margin-top', mtop + 'px');
     $('body').css('opacity', '1');
     $('#jsi-cherry-container').css('z-index', '-99');
 }
@@ -57,5 +50,4 @@ window.onresize = function () {
     canvas.height(cherry_container.height());
     canvas.width(cherry_container.width());
     loadingPage();
-    scaleEnvelope();
 }

@@ -417,22 +417,3 @@ section.container>form.flip>.front {
 .letter {
 	font-family: cursive;
 }
-
-@media screen and (max-width: 680px) {
-	#contact {
-		transform-origin: center top;
-		margin-left: 50%;
-	}
-
-	#contact:not(:target) {
-		margin-top: 60px;
-	}
-
-	#contact:target {
-		margin-top: 10px;
-	}
-
-	#flipback {
-		font-size: 36px;
-	}
-}
