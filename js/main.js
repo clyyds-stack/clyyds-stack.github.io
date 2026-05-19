@@ -20,6 +20,7 @@ function playPause() {
 }
 
 window.onload = function () {
+    loadingPage();
     $.ajaxSettings.async = true;
     $.getJSON("./font/content.json", function (result) {
         content.salutation = result.salutation;
@@ -31,13 +32,10 @@ window.onload = function () {
         $('#flipback').text(result.sender);
         $('#music').attr('src', result.bgm);
         $('#envelope').fadeIn('slow');
-
+        $('.heart').fadeOut('fast');
         let currentUrl = window.location.href;
         let firstIndex = currentUrl.indexOf("#");
         if (firstIndex <= 0) window.location.href = currentUrl + "#contact";
-    }).fail(function () {
-        document.body.innerHTML = '<div style="text-align:center; padding-top:40vh; font-family:sans-serif; color:#837362;"><h2>内容加载失败</h2><p>请检查网络连接后刷新页面</p></div>';
-        document.body.style.opacity = '1';
     });
     let contact = $('#contact');
     let mtop = (window.innerHeight - contact.height()) * 0.5;
@@ -51,4 +49,6 @@ window.onresize = function () {
     let canvas = cherry_container.find('canvas').eq(0);
     canvas.height(cherry_container.height());
     canvas.width(cherry_container.width());
+    // Do scaling for sakura background when the window is resized
+    loadingPage();
 }

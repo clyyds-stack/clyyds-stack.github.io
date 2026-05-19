@@ -599,6 +599,12 @@ function createEffectLib() {
 }
 
 // background
+function createBackground() {
+    //console.log("create background");
+}
+function initBackground() {
+    //console.log("init background");
+}
 function renderBackground() {
     gl.disable(gl.DEPTH_TEST);
 
@@ -612,6 +618,13 @@ function renderBackground() {
 
 // post process
 var postProcess = {};
+function createPostProcess() {
+    //console.log("create post process");
+}
+function initPostProcess() {
+    //console.log("init post process");
+}
+
 function renderPostProcess() {
     // gl.enable(gl.TEXTURE_2D);
     gl.disable(gl.DEPTH_TEST);
@@ -666,12 +679,16 @@ function renderPostProcess() {
 var SceneEnv = {};
 function createScene() {
     createEffectLib();
+    createBackground();
     createPointFlowers();
+    createPostProcess();
     sceneStandBy = true;
 }
 
 function initScene() {
+    initBackground();
     initPointFlowers();
+    initPostProcess();
 
     //camera.position.z = 17.320508;
     camera.position.z = pointFlower.area.z + projection.nearfar[0];
@@ -753,8 +770,8 @@ function animate() {
 function makeCanvasFullScreen(canvas) {
     var b = document.body;
     var d = document.documentElement;
-    var fullw = Math.max(b.clientWidth, b.scrollWidth, d.scrollWidth, d.clientWidth);
-    var fullh = Math.max(b.clientHeight, b.scrollHeight, d.scrollHeight, d.clientHeight);
+    fullw = Math.max(b.clientWidth, b.scrollWidth, d.scrollWidth, d.clientWidth);
+    fullh = Math.max(b.clientHeight, b.scrollHeight, d.scrollHeight, d.clientHeight);
     canvas.width = fullw;
     canvas.height = fullh;
 }
@@ -763,7 +780,7 @@ window.addEventListener('load', function (e) {
     var canvas = document.getElementById("sakura");
     try {
         makeCanvasFullScreen(canvas);
-        gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+        gl = canvas.getContext('experimental-webgl');
     } catch (e) {
         alert("WebGL not supported." + e);
         console.error(e);
@@ -782,4 +799,6 @@ window.addEventListener('load', function (e) {
 });
 
 //set window.requestAnimationFrame
-var requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame || function (c) { window.setTimeout(c, 1000 / 60); };
+(function (w, r) {
+    w['r' + r] = w['r' + r] || w['webkitR' + r] || w['mozR' + r] || w['msR' + r] || w['oR' + r] || function (c) { w.setTimeout(c, 1000 / 60); };
+})(window, 'requestAnimationFrame');

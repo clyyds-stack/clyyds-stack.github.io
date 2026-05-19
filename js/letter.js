@@ -28,6 +28,17 @@ function getPureStr(str) {
 	return res;
 }
 
+function loadingPage() {
+	let heart_div = $('.heart');
+	let heart_parent = heart_div.parent();
+	let page_width = heart_parent.width();
+	let page_height = heart_parent.height();
+	let heart_width = heart_div.width();
+	let heart_height = heart_div.height();
+	heart_div.css('top', (page_height - heart_height) / 2);
+	heart_div.css('left', (page_width - heart_width) / 2);
+}
+
 function scrollToBottom(smooth = true) {
 	let dataContainer = document.getElementById('data');
 	if (smooth) {

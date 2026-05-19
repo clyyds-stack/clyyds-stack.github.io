@@ -175,6 +175,9 @@ section.container:target>form.flip {
 #lid .flip {
 	width: 100%;
 	height: 100%;
+}
+
+#lid .flip {
 	position: absolute;
 	transform-style: preserve-3d;
 	-webkit-transform-style: preserve-3d;
