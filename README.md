@@ -1,39 +1,28 @@
-# eLuvLetter tutorial
-[![license](https://img.shields.io/github/license/Genius-Society/eLuvLetter.svg)](./LICENSE)
-[![github-action](https://github.com/Genius-Society/eLuvLetter/actions/workflows/auto-sync.yml/badge.svg)](https://github.com/Genius-Society/eLuvLetter/actions/workflows/auto-sync.yml?query=branch%3Amain)
-[![cloudflare](https://img.shields.io/badge/cloudflare-e--luvletter-f6821f.svg)](https://e-luvletter.pages.dev)
-[![hf](https://img.shields.io/badge/huggingface-eluvletter-ffd21e.svg)](https://huggingface.co/spaces/Genius-Society/eluvletter)
-[![ms](https://img.shields.io/badge/modelscope-eluvletter-624aff.svg)](https://www.modelscope.cn/collections/Genius-Society/eLuvLetter)
-[![cnblogs](https://img.shields.io/badge/cnblogs-16617269-075db3.svg)](https://www.cnblogs.com/Genius-Society/p/16617269.html)
-[![ytb](https://img.shields.io/badge/youtube-QFJfjYu36jc-ff0033.svg)](https://www.youtube.com/watch?v=QFJfjYu36jc)
-[![bili](https://img.shields.io/badge/bilibili-BV1hergYREEG-fc8bab.svg)](https://www.bilibili.com/video/BV1hergYREEG)
+# 给你的一封信
 
-The heartbeat animation indicates that the BGM is loading, please be patient and wait util the envelope appears.
+这个仓库，是我给你留的一封信。
 
-[![](https://i2.hdslb.com/bfs/archive/15697cf5676c81270f7ba1c536d9834b8313a5a2.png)](https://e-luvletter.pages.dev)
+一开始想做这个的时候，其实也没想得特别复杂。  
+就是觉得，平时很多话可能说着说着就过去了，聊天记录也会被新的消息盖住。  
+但我还是想找个地方，把一些想对你说的话认真放下来。
 
-## HuggingFace solution
-1. Register a [HuggingFace](https://huggingface.co) account;
-2. Duplicate a copy of [eLuvLetter](https://huggingface.co/spaces/Genius-Society/eLuvLetter) to your own `HuggingFace` account;
-3. Customize `./font/content.json` in your duplicated space online by the [eLuvLetter JSON Generator](https://huggingface.co/spaces/Genius-Society/gradio_tools);
-4. Commit the changes to your duplicated space;
-5. Click `Embed this Space` and copy the `direct URL` of your duplicated space.
-<img width="1230" height="295" alt="Snipaste_2025-07-23_09-53-54" src="https://github.com/user-attachments/assets/63a85723-5afa-485b-ace2-205f86dd6d3a" />
+所以就有了这里。
 
-## GitHub solution
-[HuggingFace solution](#huggingface-solution) is recommended!
-### Customization
-1. Register a `GitHub` account;
-2. Fork a copy of this repo to your own `GitHub` account;
-3. Customize `./font/content.json` in your forked repo online by the [eLuvLetter JSON Generator](https://huggingface.co/spaces/Genius-Society/gradio_tools);
-4. Commit the modification to your forked repo.
+它不一定会很华丽，也不一定会一下子做得很好看。  
+可能会慢慢改，慢慢加东西。  
+加一些我想对你说的话，加一些我们之间的小事，也可能只是某一天突然想到你，就来这里写几句。
 
-### Deployment on Netlify
-1. Enter [Netlify](https://app.netlify.com) official website;
-2. Use your GitHub account to login by authorization, click `Add new site` - `Import an existing project`;
-3. Click `GitHub`, enter the keyword `eLuvLetter` in the search box to find the previously forked repo, and select it;
-4. Click `Deploy site` to jump into `Site overview` page automatically, click `Site settings`;
-5. Click `Change site name` under `Site information`, modify second-level domain name not conflict to others, and click `Save`;
-6. After the deployment, we can visit `https://%PROJECT_NAME%.netlify.app` to broswe your page, where `%PROJECT_NAME%` is the second-level domain name customized by you.
+我知道自己有时候不太会表达，很多话到嘴边会变得很笨。  
+但我是真的很珍惜你，也很珍惜我们之间发生过的每一件小事。
 
-**Good luck~💖**
+如果你看到这里，我想让你知道：
+
+我不是一时兴起才做这个。  
+我是想用我自己的方式，给你留一个小小的地方。  
+一个只要打开，就能知道我一直在认真喜欢你的地方。
+
+以后这里可能会变得越来越完整。  
+就像我们也会慢慢走得更远一样。
+
+谢谢你出现在我的生活里。  
+也谢谢你，愿意被我喜欢。
